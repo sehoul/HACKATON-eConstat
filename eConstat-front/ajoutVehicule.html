@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>eConstat | Véhicules</title>
+        <meta charset="utf-8" />
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <script src="js/script.js"></script>
+    <body>
+        <div id="formAjoutVehicule">
+            <div class="titleAjoutVehicule">
+                <h1>AJOUT VEHICULE</h1>
+            </div>
+            <form>
+                <div class="formAjoutVehiculeInput">
+                    <label for="inputAjoutVehiculeToken">TokenVehicule</label>
+                    <input id="inputAjoutVehiculeToken" type="text">
+                </div>
+
+                <div class="formAjoutVehiculeInput">
+                    <label for="inputAjoutVehiculeMarque">Marque</label>
+                    <input id="inputAjoutVehiculeMarque" type="text" disabled>
+                </div>
+
+                <div class="formAjoutVehiculeInput">
+                    <label for="inputAjoutVehiculeModele">Modele</label>
+                    <input id="inputAjoutVehiculeModele" type="text" disabled>
+                </div>
+
+                <div class="formAjoutVehiculeInput">
+                    <label for="inputAjoutVehiculePlaque">Plaque d'immatriculation</label>
+                    <input id="inputAjoutVehiculePlaque" type="text" disabled>
+                </div>
+
+                <div class="formAjoutVehiculeInput">
+                    <label for="inputAjoutVehiculeNomAssureur">Nom de l'assureur</label>
+                    <input id="inputAjoutVehiculeNomAssureur" type="text">
+                </div>
+
+                <div class="formAjoutVehiculeInput">
+                    <label for="inputAjoutVehiculeNumeroContrat">Numéro de contrat</label>
+                    <input id="inputAjoutVehiculeNumeroContrat" type="text">
+                </div>
+
+                <div class="formAjoutVehiculeInput">
+                    <label for="inputAjoutVehiculeNumeroCarteVerte">Numéro de carte verte</label>
+                    <input id="inputAjoutVehiculeNumeroCarteVerte" type="text">
+                </div>
+
+                <div class="formAjoutVehiculeInput">
+                    <label for="inputAjoutVehiculePermis">Permis de conduire associé :</label>
+                    <select name="permis" id="inputAjoutVehiculePermis">
+                        <option value="">Sélectionner un permis</option>
+                        <option value="permisB">Permis B</option>
+                        <option value="permisMoto">Permis Moto</option>
+                    </select>
+                </div>
+
+                <div class="formAjoutVehiculeBouton">
+                    <button type="button">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
