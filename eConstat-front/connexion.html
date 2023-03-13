@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>eConstat</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <script src="js/script.js"></script>
+    <body>
+
+        <div id="formConnexion">
+            <div class="titleConnexion">
+                <h1>CONNEXION</h1>
+            </div>
+            <form>
+                <div class="formConnexionInput">
+                    <label for="inputConnexionMail">Adresse mail</label>
+                    <input id="inputConnexionMail" type="email">
+                </div>
+
+                <div class="formConnexionInput">
+                    <label for="inputConnexionPassword">Mot de passe</label>
+                    <input id="inputConnexionPassword" type="password">
+                </div>
+
+                <div class="formConnexionBouton">
+                    <button type="button">Se connecter</button>
+                </div>
+
+                <div class="formConnexionBouton">
+                    <label for="formConnexionBoutonInscription">Pas encore inscrit ?</label>
+                    <button id="formConnexionBoutonInscription" class="formBoutonSwap" onclick="afficherFormulaire()" type="button">S'inscrire</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="formInscription" style="display: none;">
+            <div class="titleInscription">
+                <h1>INSCRIPTION</h1>
+            </div>
+            <form>
+                <div class="formInscriptionInput">
+                    <label for="inputInscriptionName">Nom</label>
+                    <input id="inputInscriptionName" type="text">
+                </div>
+
+                <div class="formInscriptionInput">
+                    <label for="inputInscriptionSurname">Prénom</label>
+                    <input id="inputInscriptionSurname" type="text">
+                </div>
+
+                <div class="formInscriptionInput">
+                    <label for="inputInscriptionMail">Adresse mail</label>
+                    <input id="inputInscriptionMail" type="email">
+                </div>
+
+                <div class="formInscriptionInput">
+                    <label for="inputInscriptionPhone">N°Téléphone</label>
+                    <input id="inputInscriptionPhone" type="tel">
+                </div>
+
+                <div class="formInscriptionInput">
+                    <label for="inputInscriptionPassword">Mot de passe</label>
+                    <input id="inputInscriptionPassword" type="password">
+                </div>
+
+                <div class="formInscriptionBouton">
+                    <button type="button">S'inscrire</button>
+                </div>
+
+                <div class="formInscriptionBouton">
+                    <label for="formInscriptionBoutonConnexion">Déjà inscrit ?</label>
+                    <button id="formInscriptionBoutonConnexion" onclick="afficherFormulaire()" class="formBoutonSwap" type="button">Se connecter</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
