@@ -17,12 +17,10 @@ mesVoitures.push(voiture4)
 mesVoitures.push(voiture5)
 mesVoitures.push(voiture6)
 //------------------------------------------------------------------------------------------
-const mesPermis = new Array(2)
+const mesPermis = new Array()
 mesPermis.push(permis1)
 mesPermis.push(permis2)
 //------------------------------------------------------------------------------------------
-
-
 function afficherFormulaire(){
     const formulaireConnexion = document.getElementById("formConnexion");
     const formulaireInscription = document.getElementById("formInscription");
@@ -53,26 +51,39 @@ function checkPresenceVehicule(){
 
 function chargerPermis(){
     var selectPermis = document.getElementById("inputAjoutVehiculePermis");
+    console.log(selectPermis)
+    console.log(mesPermis)
+    console.log(mesPermis.length)
+    console.log(mesPermis.at(1))
     for(var i = 0; i < mesPermis.length; i++){
-        var permis = mesPermis[i];
-        console.log(permis);
+        var permis = mesPermis.at(i);
         selectPermis.options.add(new Option(permis.categorie+" - "+permis.numeroPermis, i));
     }
 }
 function chargerVehicule(){
     var selectVoiture = document.getElementById("inputChoixVehicule");
-    console.log(selectVoiture)
-    console.log(mesVoitures)
     for(var i = 0; i < mesVoitures.length; i++){
         var voiture = mesVoitures.at(i);
-        console.log(voiture);
         selectVoiture.options.add(new Option(voiture.marque+" "+voiture.modele+" - "+voiture.immat, i));
     }
 }
+function afficherVehicules(){
+    const listeVehicules = document.getElementById('listeVehicules');
+    mesVoitures.forEach((voiture)=>{
+        const li = document.createElement('li');
+        li.innerHTML = "<div><div>"+voiture.marque+" "+voiture.modele+"</div><div>"+voiture.immat+"</div></div>";
+        listeVehicules.appendChild(li);
+    })
+}
 if(document.getElementById("inputAjoutVehiculePermis")!=null){
+    console.log("AjoutVehicule")
     chargerPermis();
 }
 if(document.getElementById("inputChoixVehicule")!=null){
     console.log("Presinistre")
     chargerVehicule();
+}
+if(document.getElementById("listeVehicules")!=null){
+    console.log("ListeVehicule")
+    afficherVehicules()
 }
