@@ -11,3 +11,17 @@ function afficherFormulaire(){
         }
     }
 }
+function checkPresenceVehicule(){
+    const divAbsenceVehicule = document.getElementsByClassName("absenceVehicule");
+    const divPresenceVehicule = document.getElementsByClassName("presenceVehicule");
+    for(let i = 0;i<divPresenceVehicule.length;i++)
+    if (divAbsenceVehicule[i].style.display==="none"){
+        divAbsenceVehicule[i].style.display="block";
+        divPresenceVehicule[i].style.display="none";
+    }else{
+        if (divPresenceVehicule[i].style.display==="none"){
+            divPresenceVehicule[i].style.display="block";
+            divAbsenceVehicule[i].style.display="none";
+        }
+    }
+}
