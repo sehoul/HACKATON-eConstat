@@ -1,35 +1,33 @@
 <html>
-<head>
-    <title>eConstat | Véhicules</title>
-    <meta charset="utf-8" />
-    <link href="css/style.css" rel="stylesheet">
-</head>
-<script src="js/script.js"></script>
-<body>
-<div id="formAjoutVehicule">
-    <div class="titleAjoutVehicule">
-        <h1>Choix du véhicule sinistré</h1>
-    </div>
-    <form>
-        <div class="presenceVehicule formChoixVehiculeInput">
-            <label for="inputChoixVehicule">Véhicule :</label>
-            <select name="vehicules" id="inputChoixVehicule">
-                <option value="">Sélectionner un de vos véhicules</option>
-                <option value="vehicule1">Peugeot 208</option>
-                <option value="vehicule2">Citroen DS4</option>
-            </select>
+    <head>
+        <title>eConstat | Déclaration</title>
+        <meta charset="utf-8" />
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="formAjoutVehicule">
+            <div class="titleAjoutVehicule">
+                <h1>Choix du véhicule sinistré</h1>
+            </div>
+            <form>
+                <div class="presenceVehicule formChoixVehiculeInput">
+                    <label for="inputChoixVehicule">Véhicule :</label>
+                    <select name="vehicules" id="inputChoixVehicule">
+                        <option value="">Sélectionner un de vos véhicules</option>
+                    </select>
+                </div>
+                <div class="absenceVehicule" style="display: none;">Vous n'avez pas déclaré de véhicule. Veuillez l'ajouter avant de déclarer votre sinistre !</div>
+                <div class="presenceVehicule formChoixVehiculeBouton">
+                    <button type="button">Valider</button>
+                </div>
+                <div class="absenceVehicule formChoixVehiculeBouton" style="display: none;">
+                    <button type="button">Ajouter</button>
+                </div>
+                <div class="formChoixVehiculeBouton">
+                    <button type="button" onclick="checkPresenceVehicule()">Changer vue</button>
+                </div>
+            </form>
         </div>
-        <div class="absenceVehicule" style="display: none;">Vous n'avez pas déclaré de véhicule. Veuillez l'ajouter avant de déclarer votre sinistre !</div>
-        <div class="presenceVehicule formChoixVehiculeBouton">
-            <button type="button">Valider</button>
-        </div>
-        <div class="absenceVehicule formChoixVehiculeBouton" style="display: none;">
-            <button type="button">Ajouter</button>
-        </div>
-        <div class="formChoixVehiculeBouton">
-            <button type="button" onclick="checkPresenceVehicule()">Changer vue</button>
-        </div>
-    </form>
-</div>
-</body>
+    </body>
+    <script src="js/script.js"></script>
 </html>
